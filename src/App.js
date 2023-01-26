@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import ComponentA from "./functionalComponents/componentA"
 import ClassComponentA from "./classComponents"
+import Form from "./classComponents/WorkingWithForms"
 
 // function App() {
 //   let name = "Sebas"
@@ -30,25 +31,89 @@ class App extends Component {
     this.setState({ counter: 5 })
   }
 
-  render() {
-    const gretting = {
-      hello: "hola a todos"
-    }
+  // render() {
+  //   const gretting = {
+  //     hello: "hola a todos"
+  //   }
 
+  //   return (
+  //     <div>
+  //       <button onClick={() => this.increment()}>Increment counter</button>
+  //       <div>
+  //         Div 1 {this.state.counter}
+  //       </div>
+  //       <div>
+  //         Div 2 {gretting.hello}
+  //       </div>
+  //       <div>
+  //         Div 3
+  //       </div>
+  //       <ComponentA name="Sebas" age={28} />
+  //       <ClassComponentA color="Black" />
+  //     </div>
+  //   )
+  // }
+
+  //CONDITIONAL EXAMPLE
+  // render() {
+  //   const gretting = {
+  //     hello: "hola a todos"
+  //   }
+
+  //   if (false) {
+  //     return (
+  //       <div>
+  //         <button onClick={() => this.increment()}>Increment counter</button>
+  //         <div>
+  //           Div 1 {this.state.counter}
+  //         </div>
+  //         <div>
+  //           Div 2 {gretting.hello}
+  //         </div>
+  //         <div>
+  //           Div 3
+  //         </div>
+  //         <ComponentA name="Sebas" age={28} />
+  //         <ClassComponentA color="Black" />
+  //       </div>
+  //     )
+  //   } else {
+  //     return (
+  //       <div>
+  //         else way
+  //       </div>
+  //     )
+  //   }
+  // }
+
+  // CONDITIONAL RENDERING
+  renderFunction1 = () => {
+    if (true) {
+      return (
+        <div>
+          condition1
+        </div>
+      )
+    } else {
+      <div>
+        condition 2
+      </div>
+    }
+  }
+
+  render() {
     return (
       <div>
-        <button onClick={() => this.increment()}>Increment counter</button>
+        React
         <div>
-          Div 1 {this.state.counter}
+          DIV 1
         </div>
+        <br />
         <div>
-          Div 2 {gretting.hello}
+          DIV 2 
         </div>
-        <div>
-          Div 3
-        </div>
-        <ComponentA name="Sebas" age={28} />
-        <ClassComponentA color="Black" />
+        {this.renderFunction1()}
+        <Form/>
       </div>
     )
   }

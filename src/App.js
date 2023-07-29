@@ -1,7 +1,8 @@
 import React, { Component } from "react"
-import ComponentA from "./functionalComponents/componentA"
-import ClassComponentA from "./classComponents"
+// import ComponentA from "./functionalComponents/componentA"
+// import ClassComponentA from "./classComponents"
 import Form from "./classComponents/WorkingWithForms"
+import Container1 from "./containers/Container1"
 
 // function App() {
 //   let name = "Sebas"
@@ -110,10 +111,14 @@ class App extends Component {
         </div>
         <br />
         <div>
-          DIV 2 
+          DIV 2
         </div>
         {this.renderFunction1()}
-        <Form/>
+        <Form />
+        <br />
+        <br />
+        Testing container 1
+        <Container1 />
       </div>
     )
   }

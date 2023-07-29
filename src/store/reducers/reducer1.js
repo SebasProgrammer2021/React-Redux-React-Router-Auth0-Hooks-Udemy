@@ -1,24 +1,24 @@
-import * as ACTIONS_TYPES from '../actions/actions_type';
+import * as ACTIONS_TYPES from "../actions/actions_types";
 
 const initialState = {
-    statePropo1: false
-}
+    stateProp1: false,
+};
 
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case ACTIONS_TYPES.SUCCESS:
             return {
                 ...state,
-                statePropo1: true
-            }
+                stateProp1: true,
+            };
         case ACTIONS_TYPES.FAILURE:
             return {
                 ...state,
-                statePropo1: false
-            }
+                stateProp1: false,
+            };
         default:
-            return state
+            return state;
     }
-}
+};
 
 export default rootReducer;

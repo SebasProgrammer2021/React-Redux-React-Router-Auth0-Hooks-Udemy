@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 import { Provider } from 'react-redux';
-import rootReducer from './store/reducers/reducer1';
+// reducer1
+// import RootReducer from './store/reducers/reducer1';
+
+// combine reducers
+import allReducers from './store/reducers';
+
 import { createStore } from 'redux';
 
-let store = createStore(rootReducer);
+// let store = createStore(RootReducer);
+let store = createStore(allReducers);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

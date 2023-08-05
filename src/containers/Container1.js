@@ -36,8 +36,8 @@ class Container1 extends Component {
 function mapStateToProps(state) {
     console.log(state, "the state");
     return {
-        stateProp1: state.stateProp1,
-        userText: state.userText
+        stateProp1: state.reducer1.stateProp1,
+        userText: state.userReducer.userText
     }
 }
 

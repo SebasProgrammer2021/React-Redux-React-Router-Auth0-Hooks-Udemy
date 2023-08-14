@@ -1,22 +1,30 @@
-import React, { Component } from "react";
-import ComponentA from "./functionalComponents/ComponentA";
+import React, { Component } from 'react'
+
+import { ComponentA } from "./functionalComponents/ComponentA"
 import { ComponentB } from "./functionalComponents/ComponentB";
 import { ComponentC } from "./functionalComponents/ComponentC";
 
-import { Route, Route } from 'react-router'
+import Container1 from './containers/Container1';
+import Header from './containers/header';
+// import history from './utils/history';
 
-import React, { Component } from 'react'
+// import { Router, Route } from 'react-router'//no sirve
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-export default class Routes extends Component {
+
+export default class MainRoutes extends Component {
+
     render() {
         return (
-            <div>
-                <Router>
-                    <Route path="componentA" component={ComponentA} />
-                    <Route path="componentB" component={ComponentB} />
-                    <Route path="componentC" component={ComponentC} />
-                </Router>
-            </div>
+            <BrowserRouter>
+                <Header />
+                <Routes>
+                    <Route path='/' element={<Container1 />} />
+                    <Route path='/component1' element={<ComponentA />} />
+                    {/* <Route path='componentB' element={<ComponentB />} />
+                    <Route path='componentC' element={<ComponentC />} /> */}
+                </Routes>
+            </BrowserRouter>
         )
     }
 }

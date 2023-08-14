@@ -2,7 +2,8 @@ import React, { Component } from "react"
 // import ComponentA from "./functionalComponents/componentA"
 // import ClassComponentA from "./classComponents"
 import Form from "./classComponents/WorkingWithForms"
-import Container1 from "./containers/Container1"
+// import Container1 from "./containers/Container1"
+import MainRoutes from './routes';
 
 // function App() {
 //   let name = "Sebas"
@@ -118,7 +119,8 @@ class App extends Component {
         <br />
         <br />
         Testing container 1
-        <Container1 />
+        {/* <Container1 /> */}
+        <MainRoutes />
       </div>
     )
   }

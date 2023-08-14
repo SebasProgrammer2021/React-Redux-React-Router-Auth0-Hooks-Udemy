@@ -1,12 +1,10 @@
-const ComponentA = ({ name, age }) => (
-    // way 2
-    // const ComponentA = (props) => (
+import React from 'react'
+import { useParams } from 'react-router-dom';
 
-    <div>
-        hello i am c a {name} age {age}
-    </div>
-    // hello i am c a {props.name} age {props.age}
-
-)
-
-export default ComponentA;
+export const ComponentA = () => {
+    let params = useParams();
+    console.log(params);
+    return (
+        <div>Hello i am ComponentA</div>
+    )
+}

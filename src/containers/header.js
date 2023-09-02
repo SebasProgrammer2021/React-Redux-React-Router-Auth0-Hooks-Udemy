@@ -18,7 +18,7 @@ class Header extends Component {
                     Home
                 </Link>
                 {this.state.nums.map((num) => (
-                    <Link key={num.id} to={`/component${num.id}`} style={{ padding: "1rem" }}>
+                    <Link key={num.id} to={`/component/${num.id}`} style={{ padding: "1rem" }}>
                         Component-{num.id}
                     </Link>
                 ))}

@@ -5,6 +5,9 @@ import React, { Component } from 'react'
 import * as ACTIONS from '../store/actions/actions'
 
 import { connect } from 'react-redux'
+import Auth from '../utils/auth'
+
+const auth = new Auth()
 
 class Container1 extends Component {
     render() {
@@ -13,6 +16,9 @@ class Container1 extends Component {
         console.log(this.props);
         return (
             <div>
+                <button onClick={() => {
+                    auth.login()
+                }}>LOGIN</button>
                 <button onClick={() => {
                     console.log(this.props.stateProp1);
                     console.log(this.props.userText);

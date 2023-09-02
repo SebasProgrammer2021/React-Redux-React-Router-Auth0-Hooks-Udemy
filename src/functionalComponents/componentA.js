@@ -5,6 +5,6 @@ export const ComponentA = () => {
     let params = useParams();
     console.log(params);
     return (
-        <div>Hello i am ComponentA</div>
+        <div>Hello i am Component {params.id}</div>
     )
 }

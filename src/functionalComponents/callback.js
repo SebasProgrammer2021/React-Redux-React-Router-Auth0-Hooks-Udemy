@@ -1,7 +1,14 @@
 import React from 'react'
 
-export const callback = () => {
+const Callback = (props) => {
+    console.log(props, "afuera..")
+
     return (
-        <div>callback</div>
+        <div>
+            Callback cpnt
+            {console.log(props, "propsss..")}
+        </div>
     )
 }
+
+export default Callback

@@ -30,7 +30,7 @@ export default class Auth {
             }
         })
     }
-
+w
     logout = () => {
         localStorage.removeItem('access_token')
         localStorage.removeItem('id_token')
